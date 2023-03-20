@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/iconop.png">
+        <title>VideoTube</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="img/logo.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <i class="ri-menu-line"></i>
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+                <h1 id="logo-txt">VideoTube</h1>
+            </a>
+        </div>
+        <div class="search-container">
+            <form action="">
+                <input type="text" placeholder="search">
+            </form>
+            <button class="search"><i class="ri-search-line"></i></button>
+            <button class="search"><i class="ri-mic-fill"></i></button>
+        </div>
+        <div class="profile-container">
+            <a href="upload.html"><i class="ri-video-add-line"></i></a>
+            <i class="ri-grid-fill"></i>
+            <i class="ri-notification-4-line"></i>
+            <div class="profile-box">
+                <img src="img/perfil.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="body-container dif">
+        <form action="upload.html" method="get" class="form">
+            <div class="upload-form">
+                <h3 class="video-title upload-text">Subir un video</h3>
+                <div class="wrapper">
+                    <label for="name">Nombre de tu video:</label>
+                    <input type="text" name="name" id="name" class="input" placeholder="Ingresa el nombre de tu video" required max="255">
+                    <label for="ytid">Ingresa el id de tu video de YouTube:</label>
+                    <input type="text" name="ytid" id="ytid" class="input" placeholder="Asegurate de ingresar un id correcto" title="Asegurate de ingresar un id correcto o de lo contrario no cargara tu video" required max="255">
+                    <label for="id">Elige una categoria:</label>
+                    <select name="canal" id="canal" class="input">
+                        <option value="Con Ánimo de ofender">Con Ánimo de ofender</option>
+                        <option value="JuanSGuarnizo">JuanSGuarnizo</option>
+                        <option value="JuegaGerman">JuegaGerman</option>
+                        <option value="José Luis MartGon">José Luis MartGon</option>
+                    </select>
+                    <label for="videoImg">Agregar una imagen a tu video:</label>
+                    
+                    <input type="text" name="imgvid" id="imgvid" class="input" placeholder="Ingresa la url de la imagen" required>
+                    <input type="hidden" name="views" value="0 views">
+                    <button type="submit" class="submit">Publicar video</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="uploadvideo.js"></script>
+</body>
+</html>
